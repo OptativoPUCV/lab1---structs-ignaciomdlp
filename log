@@ -398,3 +398,16 @@ exercises.c:75:81: error: expected ‘;’, ‘,’ or ‘)’ before ‘{’ to
       |                                                                                 ^
 Compilation failed
 978fd9f
+Thu 14 Mar 2024 09:14:44 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:77:8: error: ‘result’ redeclared as different kind of symbol
+   77 |   int* result = (int*)malloc((size1 + size2)*sizeof(int));
+      |        ^~~~~~
+exercises.c:75:73: note: previous definition of ‘result’ with type ‘int *’
+   75 | void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,int result[]){
+      |                                                                     ~~~~^~~~~~~~
+Compilation failed
+95084c5
