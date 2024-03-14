@@ -37,3 +37,22 @@ exercises.c:30:47: error: ‘k’ undeclared (first use in this function)
 exercises.c:30:47: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 77c4335
+Thu 14 Mar 2024 08:45:35 PM UTC: 
+ exercises.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘reverseArray’:
+exercises.c:32:3: error: expected ‘,’ or ‘;’ before ‘for’
+   32 |   for (int i = size - 1; i >= 0; i--){
+      |   ^~~
+exercises.c:32:26: error: ‘i’ undeclared (first use in this function)
+   32 |   for (int i = size - 1; i >= 0; i--){
+      |                          ^
+exercises.c:32:26: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:32:37: error: expected ‘;’ before ‘)’ token
+   32 |   for (int i = size - 1; i >= 0; i--){
+      |                                     ^
+      |                                     ;
+exercises.c:32:37: error: expected statement before ‘)’ token
+Compilation failed
+58907cc
