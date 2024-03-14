@@ -62,3 +62,27 @@ Thu 14 Mar 2024 08:45:55 PM UTC:
  tests:  0|5
 total_score: 20/70
 d8e95ab
+Thu 14 Mar 2024 08:53:46 PM UTC: 
+ exercises.c | 19 ++++++++++++++++++-
+ 1 file changed, 18 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:55:11: error: assignment to ‘int *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+   55 |   newSize = cantPares
+      |           ^
+exercises.c:55:22: error: expected ‘;’ before ‘int’
+   55 |   newSize = cantPares
+      |                      ^
+      |                      ;
+   56 |   int arrPar[newSize];
+      |   ~~~                 
+exercises.c:60:7: error: ‘arrPar’ undeclared (first use in this function)
+   60 |       arrPar[aux] = arr[i];
+      |       ^~~~~~
+exercises.c:60:7: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:65:1: error: control reaches end of non-void function [-Werror=return-type]
+   65 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+aafdb12
