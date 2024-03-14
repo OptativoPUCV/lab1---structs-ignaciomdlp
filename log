@@ -176,3 +176,26 @@ exercises.c:66:10: error: function returns address of local variable [-Werror=re
 cc1: all warnings being treated as errors
 Compilation failed
 e26977f
+Thu 14 Mar 2024 09:00:18 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:55:11: error: assignment to ‘int *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+   55 |   newSize = cantPares;
+      |           ^
+exercises.c:57:7: error: size of array ‘arrPar’ has non-integer type
+   57 |   int arrPar[newSize];
+      |       ^~~~~~
+exercises.c:66:17: error: expected expression before ‘]’ token
+   66 |   return arrPar[];
+      |                 ^
+exercises.c:57:7: error: variable ‘arrPar’ set but not used [-Werror=unused-but-set-variable]
+   57 |   int arrPar[newSize];
+      |       ^~~~~~
+exercises.c:67:1: error: control reaches end of non-void function [-Werror=return-type]
+   67 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+88d76e7
