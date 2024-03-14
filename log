@@ -307,3 +307,57 @@ test.c:410:1: error: expected declaration or statement at end of input
       | ^
 Compilation failed
 fad69f4
+Thu 14 Mar 2024 09:11:52 PM UTC: 
+ exercises.c | 13 ++++++-------
+ 1 file changed, 6 insertions(+), 7 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:75:1: error: expected ‘;’ before ‘void’
+   75 | void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,int result[]{
+      | ^~~~
+exercises.c:132:3: error: unknown type name ‘Autor’
+  132 |   Autor autor;
+      |   ^~~~~
+test.c: In function ‘test_mergeSort’:
+test.c:204:3: error: implicit declaration of function ‘mergeSortedArrays’ [-Werror=implicit-function-declaration]
+  204 |   mergeSortedArrays(arr1, size1, arr2, size2, result);
+      |   ^~~~~~~~~~~~~~~~~
+test.c: In function ‘test_checkSorted’:
+test.c:258:18: error: implicit declaration of function ‘checkSorted’; did you mean ‘test_checkSorted’? [-Werror=implicit-function-declaration]
+  258 |     int result = checkSorted(arr, size);
+      |                  ^~~~~~~~~~~
+      |                  test_checkSorted
+test.c: In function ‘imprimirLibro’:
+test.c:291:57: error: request for member ‘nombre’ in something not a structure or union
+  291 |   printf("    Autor: %s (Nacido en: %d)\n", libro->autor.nombre, libro->autor.anioNacimiento);
+      |                                                         ^
+test.c:291:78: error: request for member ‘anioNacimiento’ in something not a structure or union
+  291 |   printf("    Autor: %s (Nacido en: %d)\n", libro->autor.nombre, libro->autor.anioNacimiento);
+      |                                                                              ^
+test.c: In function ‘test_biblioteca’:
+test.c:313:27: error: request for member ‘nombre’ in something not a structure or union
+  313 |         strcmp(libro.autor.nombre, autores[i]) != 0 ||
+      |                           ^
+test.c:314:20: error: request for member ‘anioNacimiento’ in something not a structure or union
+  314 |         libro.autor.anioNacimiento != aniosNacimiento[i] ||
+      |                    ^
+test.c: In function ‘filterEvenNumbers’:
+test.c:382:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  382 | int main(int argc, char *argv[]) {
+      |     ^~~~
+test.c:410:1: error: expected declaration or statement at end of input
+  410 | }
+      | ^
+test.c:7:6: error: unused variable ‘msg’ [-Werror=unused-variable]
+    7 | char msg[300];
+      |      ^~~
+At top level:
+test.c:382:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  382 | int main(int argc, char *argv[]) {
+      |     ^~~~
+test.c:47:6: error: ‘readIntArray’ defined but not used [-Werror=unused-function]
+   47 | void readIntArray(int arr[], int *size) {
+      |      ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+9532bb0
