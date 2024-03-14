@@ -375,3 +375,17 @@ test.c:204:3: error: implicit declaration of function ‘mergeSortedArrays’ [-
 cc1: all warnings being treated as errors
 Compilation failed
 1f06e00
+Thu 14 Mar 2024 09:13:05 PM UTC: 
+ exercises.c | 1 -
+ 1 file changed, 1 deletion(-)
+In file included from test.c:1:
+exercises.c:75:81: error: expected ‘;’, ‘,’ or ‘)’ before ‘{’ token
+   75 | void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,int result[]{
+      |                                                                                 ^
+test.c: In function ‘test_mergeSort’:
+test.c:204:3: error: implicit declaration of function ‘mergeSortedArrays’ [-Werror=implicit-function-declaration]
+  204 |   mergeSortedArrays(arr1, size1, arr2, size2, result);
+      |   ^~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+84d31c7
