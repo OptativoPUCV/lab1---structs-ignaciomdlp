@@ -219,3 +219,17 @@ exercises.c:67:1: error: control reaches end of non-void function [-Werror=retur
 cc1: all warnings being treated as errors
 Compilation failed
 5fc4645
+Thu 14 Mar 2024 09:02:04 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:55:13: error: invalid type argument of unary ‘*’ (have ‘int’)
+   55 |   newSize = *cantPares;
+      |             ^~~~~~~~~~
+exercises.c:66:16: error: returning ‘int’ from a function with return type ‘int *’ makes pointer from integer without a cast [-Werror=int-conversion]
+   66 |   return arrPar[*newSize];
+      |          ~~~~~~^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+27f60df
