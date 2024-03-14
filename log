@@ -488,3 +488,35 @@ exercises.c:77:7: error: variable ‘result’ set but not used [-Werror=unused-
 cc1: all warnings being treated as errors
 Compilation failed
 eba302d
+Thu 14 Mar 2024 09:16:40 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:77:7: error: ‘result’ redeclared as different kind of symbol
+   77 |   int result = (int)malloc((size1 + size2)*sizeof(int));
+      |       ^~~~~~
+exercises.c:75:73: note: previous definition of ‘result’ with type ‘int *’
+   75 | void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,int result[]){
+      |                                                                     ~~~~^~~~~~~~
+exercises.c:77:16: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+   77 |   int result = (int)malloc((size1 + size2)*sizeof(int));
+      |                ^
+exercises.c:85:15: error: subscripted value is neither array nor pointer nor vector
+   85 |         result[k] = arr2[j];
+      |               ^
+exercises.c:89:17: error: subscripted value is neither array nor pointer nor vector
+   89 |           result[k] = arr1[i];
+      |                 ^
+exercises.c:95:15: error: subscripted value is neither array nor pointer nor vector
+   95 |         result[k] = arr2[j];
+      |               ^
+exercises.c:99:15: error: subscripted value is neither array nor pointer nor vector
+   99 |         result[k] = arr1[i];
+      |               ^
+exercises.c:77:7: error: variable ‘result’ set but not used [-Werror=unused-but-set-variable]
+   77 |   int result = (int)malloc((size1 + size2)*sizeof(int));
+      |       ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+8a5761a
