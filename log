@@ -125,3 +125,20 @@ exercises.c:64:16: error: returning ‘int’ from a function with return type �
 cc1: all warnings being treated as errors
 Compilation failed
 2cd160a
+Thu 14 Mar 2024 08:56:43 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:64:16: error: array subscript is not an integer
+   64 |   return arrPar[newSize];
+      |                ^
+exercises.c:56:7: error: variable ‘arrPar’ set but not used [-Werror=unused-but-set-variable]
+   56 |   int arrPar[*newSize];
+      |       ^~~~~~
+exercises.c:65:1: error: control reaches end of non-void function [-Werror=return-type]
+   65 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+814436f
