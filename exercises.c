@@ -24,7 +24,18 @@ Ejercicio 2: Invertir un Arreglo
 Descripción: Escribe una función que tome un arreglo y su tamaño, y luego
 invierta el orden de sus elementos.
 */
-void reverseArray(int arr[], int size) {}
+void reverseArray(int arr[], int size){
+  int arr2[size];
+
+  for (int i = size - 1, int k = 0; i >= 0; i--, k++){
+    arr2[i] = arr[k];
+  }
+
+  for (int j = 0; j < size; j++){
+    arr[j] = arr2[j];
+  }
+  
+}
 
 /*
 Ejercicio 3: Filtrar Números Pares

@@ -9,3 +9,17 @@ Thu 14 Mar 2024 08:34:06 PM UTC:
  tests:  0|6
 total_score: 10/70
 1378cf6
+Thu 14 Mar 2024 08:42:48 PM UTC: 
+ exercises.c | 13 ++++++++++++-
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘reverseArray’:
+exercises.c:30:26: error: expected identifier or ‘(’ before ‘int’
+   30 |   for (int i = size - 1, int k = 0; i >= 0; i--, k++){
+      |                          ^~~
+exercises.c:30:50: error: ‘k’ undeclared (first use in this function)
+   30 |   for (int i = size - 1, int k = 0; i >= 0; i--, k++){
+      |                                                  ^
+exercises.c:30:50: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+91bbe29
