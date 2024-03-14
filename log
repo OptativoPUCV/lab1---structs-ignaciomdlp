@@ -159,3 +159,20 @@ exercises.c:66:1: error: control reaches end of non-void function [-Werror=retur
 cc1: all warnings being treated as errors
 Compilation failed
 ce0f640
+Thu 14 Mar 2024 08:59:16 PM UTC: 
+ exercises.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:55:11: error: assignment to ‘int *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+   55 |   newSize = cantPares;
+      |           ^
+exercises.c:57:7: error: size of array ‘arrPar’ has non-integer type
+   57 |   int arrPar[newSize];
+      |       ^~~~~~
+exercises.c:66:10: error: function returns address of local variable [-Werror=return-local-addr]
+   66 |   return arrPar;
+      |          ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+e26977f
