@@ -199,3 +199,23 @@ exercises.c:67:1: error: control reaches end of non-void function [-Werror=retur
 cc1: all warnings being treated as errors
 Compilation failed
 88d76e7
+Thu 14 Mar 2024 09:01:48 PM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:55:13: error: invalid type argument of unary ‘*’ (have ‘int’)
+   55 |   newSize = *cantPares;
+      |             ^~~~~~~~~~
+exercises.c:66:17: error: expected expression before ‘]’ token
+   66 |   return arrPar[];
+      |                 ^
+exercises.c:57:7: error: variable ‘arrPar’ set but not used [-Werror=unused-but-set-variable]
+   57 |   int arrPar[*newSize];
+      |       ^~~~~~
+exercises.c:67:1: error: control reaches end of non-void function [-Werror=return-type]
+   67 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+5fc4645
