@@ -53,7 +53,7 @@ int *filterEvenNumbers(int arr[], int size, int *newSize){
   }
   
   
-  int arrPar[];
+  //int arrPar[];
   int *arrPar = (int *)malloc(cantPares*sizeof(int));
   if (arrPar == NULL) exit(EXIT_FAILURE);
   
