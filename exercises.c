@@ -45,7 +45,7 @@ Descripción: Escribe una función que tome un arreglo de enteros
 y su tamaño, y luego devuelva un nuevo arreglo que contenga solo
 los números pares del arreglo original.
 */
-int *filterEvenNumbers(int arr[], int size, int *newSize){/* return NULL;}*/
+int *filterEvenNumbers(int arr[], int size, int *newSize){
   
   int cantPares = 0;
   
@@ -123,7 +123,6 @@ int checkSorted(int arr[], int size){
   if (asc == 1) return 1;
   else if (desc == 1) return -1;
   else return 0;
-  
 }
 
 /*
