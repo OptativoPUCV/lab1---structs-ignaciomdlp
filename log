@@ -698,3 +698,38 @@ exercises.c:77:7: error: variable ‘result’ set but not used [-Werror=unused-
 cc1: all warnings being treated as errors
 Compilation failed
 519231d
+Sat 16 Mar 2024 05:12:54 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:66:10: error: function returns address of local variable [-Werror=return-local-addr]
+   66 |   return arrPar;
+      |          ^~~~~~
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:77:7: error: ‘result’ redeclared as different kind of symbol
+   77 |   int result[] = (int)malloc((size1 + size2)*sizeof(int));
+      |       ^~~~~~
+exercises.c:75:74: note: previous definition of ‘result’ with type ‘int **’
+   75 | void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,int *result[]){
+      |                                                                     ~~~~~^~~~~~~~
+exercises.c:77:18: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+   77 |   int result[] = (int)malloc((size1 + size2)*sizeof(int));
+      |                  ^
+exercises.c:77:18: error: invalid initializer
+exercises.c:77:7: error: variable ‘result’ set but not used [-Werror=unused-but-set-variable]
+   77 |   int result[] = (int)malloc((size1 + size2)*sizeof(int));
+      |       ^~~~~~
+test.c: In function ‘test_mergeSort’:
+test.c:204:47: error: passing argument 5 of ‘mergeSortedArrays’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  204 |   mergeSortedArrays(arr1, size1, arr2, size2, result);
+      |                                               ^~~~~~
+      |                                               |
+      |                                               int *
+In file included from test.c:1:
+exercises.c:75:74: note: expected ‘int **’ but argument is of type ‘int *’
+   75 | void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,int *result[]){
+      |                                                                     ~~~~~^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+b70cdb5
