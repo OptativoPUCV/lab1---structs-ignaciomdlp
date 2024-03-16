@@ -1051,3 +1051,39 @@ exercises.c:78:73: note: previous definition of ‘result’ with type ‘int *�
 cc1: all warnings being treated as errors
 Compilation failed
 6545940
+Sat 16 Mar 2024 05:33:17 PM UTC: 
+ exercises.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:56:7: error: array size missing in ‘arrPar’
+   56 |   int arrPar[];
+      |       ^~~~~~
+exercises.c:57:7: error: conflicting types for ‘arrPar’; have ‘int’
+   57 |   int arrPar = (int *)malloc(cantPares*sizeof(int));
+      |       ^~~~~~
+exercises.c:56:7: note: previous declaration of ‘arrPar’ with type ‘int[1]’
+   56 |   int arrPar[];
+      |       ^~~~~~
+exercises.c:57:16: error: initialization of ‘int’ from ‘int *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   57 |   int arrPar = (int *)malloc(cantPares*sizeof(int));
+      |                ^
+exercises.c:58:14: error: comparison between pointer and integer [-Werror]
+   58 |   if (arrPar == NULL) exit(EXIT_FAILURE);
+      |              ^~
+exercises.c:63:13: error: subscripted value is neither array nor pointer nor vector
+   63 |       arrPar[aux] = arr[i];
+      |             ^
+exercises.c:69:10: error: returning ‘int’ from a function with return type ‘int *’ makes pointer from integer without a cast [-Werror=int-conversion]
+   69 |   return arrPar;
+      |          ^~~~~~
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:80:8: error: ‘result’ redeclared as different kind of symbol
+   80 |   int *result = (int *)malloc((size1 + size2)*sizeof(int));
+      |        ^~~~~~
+exercises.c:78:73: note: previous definition of ‘result’ with type ‘int *’
+   78 | void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,int result[]){
+      |                                                                     ~~~~^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+4c1b1a5
