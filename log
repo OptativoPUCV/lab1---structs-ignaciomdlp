@@ -1251,3 +1251,9 @@ exercises.c:76:73: note: previous definition of ‘result’ with type ‘int *�
       |                                                                     ~~~~^~~~~~~~
 Compilation failed
 e6e1922
+Sat 16 Mar 2024 06:14:07 PM UTC: 
+ exercises.c | 19 ++++++++++++-------
+ 1 file changed, 12 insertions(+), 7 deletions(-)
+ tests:  0|3
+total_score: 40/70
+c96c5de
