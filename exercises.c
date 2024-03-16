@@ -176,6 +176,8 @@ typedef struct nodo {
 } Nodo;
 
 Nodo *crearListaEnlazada(int arr[], int size){
+  if (size == 0 || arr == NULL) return NULL; 
+  
   Nodo *listaEnlazada;
   listaEnlazada = (Nodo*)malloc(sizeof(Nodo));
   if (listaEnlazada == NULL) exit(EXIT_FAILURE);
