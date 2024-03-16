@@ -1222,3 +1222,19 @@ exercises.c:76:73: note: previous definition of ‘result’ with type ‘int *�
       |                                                                     ~~~~^~~~~~~~
 Compilation failed
 147e467
+Sat 16 Mar 2024 05:51:15 PM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:78:8: error: ‘result’ redeclared as different kind of symbol
+   78 |   int *result = (int *)malloc((size1 + size2)*sizeof(int));
+      |        ^~~~~~
+exercises.c:76:73: note: previous definition of ‘result’ with type ‘int *’
+   76 | void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,int result[]){
+      |                                                                     ~~~~^~~~~~~~
+exercises.c:87:19: error: expected expression before ‘>’ token
+   87 |       if(arr1[i] => arr2[j]){
+      |                   ^
+Compilation failed
+95d5e34
