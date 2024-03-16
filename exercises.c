@@ -157,6 +157,8 @@ void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor,
   libro->autor.anioNacimiento = anioNacimiento;
   libro->anioPublicacion = anioPublicacion;
 }
+
+
 /*
 Ejercicio 7: Lista enlazada de números
 Descripción: Escribe una función que tome un arreglo de enteros y su tamaño, y
@@ -166,11 +168,34 @@ mismo orden que los números aparecen en el arreglo. El último nodo de la lista
 debe apuntar a NULL. La función debe devolver un puntero al primer nodo de la
 lista enlazada.
 Recuerda reservar memoria dinámica para cada nodo usando malloc.
-  */
+*/
 
 typedef struct nodo {
   int numero;
   struct nodo *siguiente; // puntero al siguiente nodo
 } Nodo;
 
-Nodo *crearListaEnlazada(int arr[], int size) { return NULL; }
+Nodo *crearListaEnlazada(int arr[], int size){
+  Nodo *listaEnlazada;
+  listaEnlazada = (Nodo*)malloc(sizeof(Nodo));
+  if (listaEnlazada == NULL) exit(EXIT_FAILURE);
+
+  listaEnlazada->numero = arr[0];
+  listaEnlazada->siguiente = NULL;
+  
+  Nodo* nodoActual = listaEnlazada;
+  
+  for(int i = 1; i < size; i++){
+    Nodo *nuevoNodo;
+    nuevoNodo = (Nodo*)malloc(sizeof(Nodo));
+    if (nuevoNodo == NULL) exit(EXIT_FAILURE);
+
+    nuevoNodo->numero = arr[i];
+    nuevoNodo->siguiente = NULL;
+    
+    nodoActual->siguiente = nuevoNodo;
+
+    nodoActual = nuevoNodo;
+  }
+  return nodoActual;
+}
