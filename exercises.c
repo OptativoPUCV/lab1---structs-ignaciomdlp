@@ -52,9 +52,9 @@ int *filterEvenNumbers(int arr[], int size, int *newSize){
     if (arr[i] % 2 == 0) cantPares++;
   }
   
-  *newSize = cantPares;
+  
   int arrPar[];
-  int *arrrPar = (int *)malloc((newSize)*sizeof(int));
+  int *arrrPar = (int *)malloc(cantPares*sizeof(int));
   if (arrpar == NULL) exit(EXIT_FAILURE);
   
   int aux = 0;
@@ -64,6 +64,8 @@ int *filterEvenNumbers(int arr[], int size, int *newSize){
       aux++;
     }
   }
+  
+  *newSize = cantPares;
   return arrPar;
 }
 

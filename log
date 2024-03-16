@@ -944,3 +944,32 @@ exercises.c:76:73: note: previous definition of ‘result’ with type ‘int *�
 cc1: all warnings being treated as errors
 Compilation failed
 93b92a8
+Sat 16 Mar 2024 05:32:13 PM UTC: 
+ exercises.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:56:7: error: array size missing in ‘arrPar’
+   56 |   int arrPar[];
+      |       ^~~~~~
+exercises.c:58:7: error: ‘arrpar’ undeclared (first use in this function); did you mean ‘arrPar’?
+   58 |   if (arrpar == NULL) exit(EXIT_FAILURE);
+      |       ^~~~~~
+      |       arrPar
+exercises.c:58:7: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:69:10: error: function returns address of local variable [-Werror=return-local-addr]
+   69 |   return arrPar;
+      |          ^~~~~~
+exercises.c:57:8: error: unused variable ‘arrrPar’ [-Werror=unused-variable]
+   57 |   int *arrrPar = (int *)malloc(cantPares*sizeof(int));
+      |        ^~~~~~~
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:80:8: error: ‘result’ redeclared as different kind of symbol
+   80 |   int *result = (int *)malloc((size1 + size2)*sizeof(int));
+      |        ^~~~~~
+exercises.c:78:73: note: previous definition of ‘result’ with type ‘int *’
+   78 | void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,int result[]){
+      |                                                                     ~~~~^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+8e3d736
