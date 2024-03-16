@@ -973,3 +973,31 @@ exercises.c:78:73: note: previous definition of ‘result’ with type ‘int *�
 cc1: all warnings being treated as errors
 Compilation failed
 8e3d736
+Sat 16 Mar 2024 05:32:23 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:56:7: error: array size missing in ‘arrPar’
+   56 |   int arrPar[];
+      |       ^~~~~~
+exercises.c:57:8: error: conflicting types for ‘arrPar’; have ‘int *’
+   57 |   int *arrPar = (int *)malloc(cantPares*sizeof(int));
+      |        ^~~~~~
+exercises.c:56:7: note: previous declaration of ‘arrPar’ with type ‘int[1]’
+   56 |   int arrPar[];
+      |       ^~~~~~
+exercises.c:58:7: error: ‘arrpar’ undeclared (first use in this function); did you mean ‘arrPar’?
+   58 |   if (arrpar == NULL) exit(EXIT_FAILURE);
+      |       ^~~~~~
+      |       arrPar
+exercises.c:58:7: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:80:8: error: ‘result’ redeclared as different kind of symbol
+   80 |   int *result = (int *)malloc((size1 + size2)*sizeof(int));
+      |        ^~~~~~
+exercises.c:78:73: note: previous definition of ‘result’ with type ‘int *’
+   78 | void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,int result[]){
+      |                                                                     ~~~~^~~~~~~~
+Compilation failed
+ffe5394
