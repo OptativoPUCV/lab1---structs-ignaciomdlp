@@ -876,3 +876,21 @@ exercises.c:75:73: note: previous definition of ‘result’ with type ‘int *�
 cc1: all warnings being treated as errors
 Compilation failed
 c6c43a1
+Sat 16 Mar 2024 05:19:37 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:66:10: error: function returns address of local variable [-Werror=return-local-addr]
+   66 |   return arrPar;
+      |          ^~~~~~
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:77:8: error: ‘result’ redeclared as different kind of symbol
+   77 |   int *result = (int *)malloc((size1 + size2)*sizeof(int));
+      |        ^~~~~~
+exercises.c:75:73: note: previous definition of ‘result’ with type ‘int *’
+   75 | void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,int result[]){
+      |                                                                     ~~~~^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+5a135f5
