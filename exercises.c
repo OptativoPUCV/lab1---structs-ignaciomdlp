@@ -126,8 +126,8 @@ int checkSorted(int arr[], int size){
     if (arr[i - 1] < arr[i]) asc = 1;
     else if (arr[i - 1] > arr[i]) desc = 1;
   }
-  if (asc == 1) return 1;
-  else if (desc == 1) return -1;
+  if (asc == 1 && desc == 0) return 1;
+  else if (desc == 1 && asc == 0) return -1;
   else return 0;
 }
 
